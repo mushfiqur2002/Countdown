@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:#B7C4CF;
+}
+.container{
+    width: 70%;
+    height: 40vh;
+    background: #FEFBF6;
+    display: grid;
+    grid-template-columns: .9fr 1fr;
+    box-shadow: 10px 10px 50px 1px rgba(0,0,0,0.5);
+}
+.one,.two{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.one .image{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.one .image img{
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.two .text{
+    width: 100%;
+    height: 95%;
+    display: grid;
+    grid-template-rows: .8fr 1fr 1.2fr;
+}
+.two .text .heading{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #7F5283;
+}
+.two .text .pera p{
+    padding: 0px 50px 0px 50px;
+}
+.two .text .pera .peragraph{
+    color: #555;
+}
+.two .text .pera .dateline{
+    color: orangered;
+    font-size: 20px;
+    padding-top: 10px;;
+}
+.two .text .time{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.two .text .time div{
+    width: 20%;
+    height: 70%;
+    background: #A6D1E6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #3D3C42;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 15px;;
+}
+.two .text .time div p{
+    color:#9c625e;
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 80%;
+        height: auto;
+    }
+    .two .text .time div{
+        height: 50%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .two .text .pera p{
+        padding: 0px 30px 0px 30px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .one{
+        height: 50%;
+    }
+    .two{
+        height: 100%;
+    }
+    .two .text .heading h1{
+        font-size: 25px;
+    }
+    .two .text .time{
+        align-items: flex-start;
+        place-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .two .text .time .span{
+        width: 90%;
+        height: 70%;
+    }
+}
